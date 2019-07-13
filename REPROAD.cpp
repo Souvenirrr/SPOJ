@@ -29,15 +29,12 @@ int main(){
 			{
 				max_len = max(i - front + 1, max_len);
 			}else{
-				for(front; front < i; front++){
+				while( zeros > k && front < i ) {
 					if(a[front] == 0){
-						zeros--;
+					    zeros--;
 					}
-					if(zeros < k){ 
-						front++;	
-						break;
-					}
-				 }
+					front++;
+				}
 			}
 		}
 		cout<<max_len<<endl;
