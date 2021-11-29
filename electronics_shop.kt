@@ -11,7 +11,7 @@ fun getMoneySpent(keyboards: Array<Int>, drives: Array<Int>, b: Int): Int {
     
     for(keyboard in keyboards.reversed()) {
         for(drive in drives.reversed()) {
-            if((keyboard + drive) < b && (keyboard + drive) > max) {
+            if((keyboard + drive) <= b && (keyboard + drive) > max) {
                 max = keyboard + drive 
             }
         }
